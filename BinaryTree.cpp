@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 BinaryTree::BinaryTree() {
     top = nullptr;
 }
@@ -42,7 +41,7 @@ void BinaryTree::preorder() {
     preorder(top);
 }
 
-void BinaryTree::preorder(Vertex* v) {
+void BinaryTree::preorder(const Vertex* v) {
     printVertex(v);
     if(v->left != nullptr) {
         preorder(v->left);
@@ -57,7 +56,7 @@ void BinaryTree::postorder() {
     postorder(top);
 }
 
-void BinaryTree::postorder(Vertex* v) {
+void BinaryTree::postorder(const Vertex * v) {
     if(v->left != nullptr) {
         postorder(v->left);
     }
@@ -67,13 +66,12 @@ void BinaryTree::postorder(Vertex* v) {
     printVertex(v);
 }
 
-
 void BinaryTree::inorder() {
     cout << endl << "INORDER: " << endl;
     inorder(top);
 }
 
-void BinaryTree::inorder(Vertex* v) {
+void BinaryTree::inorder(const Vertex * v) {
     if(v->left != nullptr) {
         inorder(v->left);
     }
@@ -83,7 +81,11 @@ void BinaryTree::inorder(Vertex* v) {
     }
 }
 
-void BinaryTree::print(const string &prefix, const Vertex* v, const bool isLeft, const bool isTop) {
+void BinaryTree::print(const string &prefix,
+                       const Vertex* v,
+                       const bool isLeft,
+                       const bool isTop) {
+
     if(v != nullptr) {
         cout << prefix;
         cout << (isTop ? "--------" : (isLeft ? "|--(L)--" : "|__(R)__"));
@@ -101,6 +103,6 @@ void BinaryTree::print() {
     print(EMPTY_STRING, top, false, true);
 }
 
-void BinaryTree::printVertex(Vertex * v) {
+void BinaryTree::printVertex(const Vertex * v) {
     cout << v->key << ", ";
 }

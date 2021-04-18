@@ -4,7 +4,7 @@
 #define BINARYTREE_BINARYTREE_H
 #define EMPTY_STRING ""
 
-
+using namespace std;
 class BinaryTree {
 
 private:
@@ -15,7 +15,11 @@ private:
     };
     Vertex* top;
 
-    void print(const std::string &prefix, const Vertex *v, bool isLeft, bool isTop);
+    void print(const string &prefix,
+               const Vertex *v,
+               bool isLeft,
+               bool isTop);
+
     Vertex * insertKey(Vertex *, int);
 
 public:
@@ -24,14 +28,12 @@ public:
     static Vertex* createVertex(int);
     void insertKey(int);
     void preorder();
-    static void preorder(Vertex*);
+    static void preorder(const Vertex*);
     void postorder();
-    static void postorder(Vertex*);
+    static void postorder(const Vertex*);
     void inorder();
-    static void inorder(Vertex*);
+    static void inorder(const Vertex*);
     void print();
-    static void printVertex(Vertex *);
+    static void printVertex(const Vertex *);
 };
-
-
 #endif //BINARYTREE_BINARYTREE_H
