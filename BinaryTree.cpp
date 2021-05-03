@@ -18,7 +18,8 @@ BinaryTree::Vertex* BinaryTree::createVertex(const int key) {
     return v;
 }
 
-BinaryTree::Vertex* BinaryTree::insertKey(Vertex * parent, const int key) {
+BinaryTree::Vertex* BinaryTree::insertKey(Vertex * parent,
+                                          const int key) {
     if(parent == nullptr) {
         return createVertex(key);
     }
@@ -90,12 +91,19 @@ void BinaryTree::print(const string &prefix,
         cout << prefix;
         cout << (isTop ? "--------" : (isLeft ? "|--(L)--" : "|__(R)__"));
 
-        // print the value of the node
+        // wypisz wartosc wierzcholka
         cout << "[" << v->key << "] " << endl;
 
-        // enter the next tree level - left and right branch
-        print(prefix + (isLeft ? "|        " : "         "), v->left, true, false);
-        print(prefix + (isLeft ? "|        " : "         "), v->right, false, false);
+        // wypisz nastepny poziom - lewa i praw galaz
+        print(prefix + (isLeft ? "|        " : "         "),
+              v->left,
+              true,
+              false);
+
+        print(prefix + (isLeft ? "|        " : "         "),
+              v->right,
+              false,
+              false);
     }
 }
 
