@@ -15,17 +15,16 @@ private:
     };
     TreeNode* top;
 
-    void print(const string &prefix,
-               const TreeNode *v,
-               bool isLeft,
-               bool isTop);
+    void print(const string &prefix, const TreeNode *node, bool isLeft, bool isTop);
 
     TreeNode * insertValue(TreeNode *, int);
+    int countNodes(TreeNode *node);
 
 public:
     BinaryTree();
     static TreeNode* createVertex(int);
+    int getSizeOfTree();
     void insertValue(int);
     void print();
 };
-#endif //BINARYTREE_BINARYTREE_H
+#endif

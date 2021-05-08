@@ -3,11 +3,11 @@
 
 using namespace std;
 int main() {
-    std::cout << "To jest imlementacja drzewa binarnego" << std::endl;
-
-    cout << endl << endl;
+    cout << "Binary tree implementation:" << endl << endl;
 
     auto* tree = new BinaryTree();
+
+    cout << "Size: " << tree->getSizeOfTree() << endl;
 
     tree->insertValue(10);
     tree->insertValue(5);
@@ -19,8 +19,12 @@ int main() {
     tree->insertValue(15);
     tree->insertValue(17);
     tree->insertValue(9);
-
+    tree->insertValue(2);
+    tree->insertValue(3);
+    tree->insertValue(22);
     tree->print();
+
+    cout << "Size: " << tree->getSizeOfTree();
 
     return 0;
 }

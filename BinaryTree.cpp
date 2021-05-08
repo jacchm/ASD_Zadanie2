@@ -34,26 +34,48 @@ void BinaryTree::insertValue(const int key) {
     top = insertValue(top, key);
 }
 
+int BinaryTree::getSizeOfTree() {
+    // if the tree is empty
+    if (top == nullptr) {
+        return 0;
+    }
+
+    int leftSize = countNodes(top->left);
+    int rightSize = countNodes(top->right);
+
+    return leftSize + rightSize + 1;
+}
+
+int BinaryTree::countNodes(TreeNode *node) {
+    if (node == nullptr) {
+        return 0;
+    }
+    int leftSize = countNodes(node->left);
+    int rightSize = countNodes(node->right);
+
+    return leftSize + rightSize + 1;
+}
+
 void BinaryTree::print(const string &prefix,
-                       const TreeNode *v,
+                       const TreeNode *node,
                        const bool isLeft,
                        const bool isTop) {
 
-    if (v != nullptr) {
+    if (node != nullptr) {
         cout << prefix;
         cout << (isTop ? "--------" : (isLeft ? "|--(L)--" : "|__(R)__"));
 
         // wypisz wartosc wierzcholka
-        cout << "[" << v->value << "] " << endl;
+        cout << "[" << node->value << "] " << endl;
 
         // wypisz nastepny poziom - lewa i praw galaz
         print(prefix + (isLeft ? "|        " : "         "),
-              v->left,
+              node->left,
               true,
               false);
 
         print(prefix + (isLeft ? "|        " : "         "),
-              v->right,
+              node->right,
               false,
               false);
     }
