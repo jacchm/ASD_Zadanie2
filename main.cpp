@@ -22,9 +22,5 @@ int main() {
 
     tree->print();
 
-    tree->preorder();
-    tree->inorder();
-    tree->postorder();
-
     return 0;
 }

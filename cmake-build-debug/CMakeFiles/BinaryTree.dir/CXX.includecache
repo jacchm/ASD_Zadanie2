@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-D:/02_PROGRAMOWANIE/cpp/BinaryTree/BinaryTree.cpp
+D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/BinaryTree.cpp
 BinaryTree.h
-D:/02_PROGRAMOWANIE/cpp/BinaryTree/BinaryTree.h
+D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/BinaryTree.h
 
-D:/02_PROGRAMOWANIE/cpp/BinaryTree/BinaryTree.h
+D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/BinaryTree.h
 iostream
 -
+
+D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/main.cpp
+iostream
+-
+BinaryTree.h
+D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/BinaryTree.h
 

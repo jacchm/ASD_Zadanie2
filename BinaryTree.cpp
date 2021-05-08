@@ -6,27 +6,24 @@ BinaryTree::BinaryTree() {
     top = nullptr;
 }
 
-BinaryTree::~BinaryTree() {
-    delete top;
-}
-
-BinaryTree::Vertex* BinaryTree::createVertex(const int key) {
-    Vertex* v = new Vertex();
+BinaryTree::TreeNode *BinaryTree::createVertex(const int key) {
+    TreeNode *v = new TreeNode();
     v->key = key;
     v->left = nullptr;
     v->right = nullptr;
     return v;
 }
 
-BinaryTree::Vertex* BinaryTree::insertKey(Vertex * parent,
-                                          const int key) {
-    if(parent == nullptr) {
+BinaryTree::TreeNode *BinaryTree::insertKey(TreeNode *parent, const int key) {
+    // if there is no root
+    if (parent == nullptr) {
         return createVertex(key);
     }
-
-    if(key < parent->key) {
+    // new value is smaller than parent's value -> insert on the left
+    if (key < parent->key) {
         parent->left = insertKey(parent->left, key);
     }
+        // new value is greater than parent's value -> insert on the right
     else {
         parent->right = insertKey(parent->right, key);
     }
@@ -37,57 +34,12 @@ void BinaryTree::insertKey(const int key) {
     top = insertKey(top, key);
 }
 
-void BinaryTree::preorder() {
-    cout << endl << "PREORDER: " << endl;
-    preorder(top);
-}
-
-void BinaryTree::preorder(const Vertex* v) {
-    printVertex(v);
-    if(v->left != nullptr) {
-        preorder(v->left);
-    }
-    if(v->right != nullptr) {
-        preorder(v->right);
-    }
-}
-
-void BinaryTree::postorder() {
-    cout << endl << "POSTORDER: " << endl;
-    postorder(top);
-}
-
-void BinaryTree::postorder(const Vertex * v) {
-    if(v->left != nullptr) {
-        postorder(v->left);
-    }
-    if(v->right != nullptr) {
-        postorder(v->right);
-    }
-    printVertex(v);
-}
-
-void BinaryTree::inorder() {
-    cout << endl << "INORDER: " << endl;
-    inorder(top);
-}
-
-void BinaryTree::inorder(const Vertex * v) {
-    if(v->left != nullptr) {
-        inorder(v->left);
-    }
-    printVertex(v);
-    if(v->right != nullptr) {
-        inorder(v->right);
-    }
-}
-
 void BinaryTree::print(const string &prefix,
-                       const Vertex* v,
+                       const TreeNode *v,
                        const bool isLeft,
                        const bool isTop) {
 
-    if(v != nullptr) {
+    if (v != nullptr) {
         cout << prefix;
         cout << (isTop ? "--------" : (isLeft ? "|--(L)--" : "|__(R)__"));
 
@@ -109,8 +61,4 @@ void BinaryTree::print(const string &prefix,
 
 void BinaryTree::print() {
     print(EMPTY_STRING, top, false, true);
-}
-
-void BinaryTree::printVertex(const Vertex * v) {
-    cout << v->key << ", ";
 }

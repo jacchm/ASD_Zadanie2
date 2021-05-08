@@ -8,32 +8,24 @@ using namespace std;
 class BinaryTree {
 
 private:
-    struct Vertex {
+    struct TreeNode {
         int key;
-        Vertex* left;
-        Vertex* right;
+        TreeNode* left;
+        TreeNode* right;
     };
-    Vertex* top;
+    TreeNode* top;
 
     void print(const string &prefix,
-               const Vertex *v,
+               const TreeNode *v,
                bool isLeft,
                bool isTop);
 
-    Vertex * insertKey(Vertex *, int);
+    TreeNode * insertKey(TreeNode *, int);
 
 public:
     BinaryTree();
-    ~BinaryTree();
-    static Vertex* createVertex(int);
+    static TreeNode* createVertex(int);
     void insertKey(int);
-    void preorder();
-    static void preorder(const Vertex*);
-    void postorder();
-    static void postorder(const Vertex*);
-    void inorder();
-    static void inorder(const Vertex*);
     void print();
-    static void printVertex(const Vertex *);
 };
 #endif //BINARYTREE_BINARYTREE_H

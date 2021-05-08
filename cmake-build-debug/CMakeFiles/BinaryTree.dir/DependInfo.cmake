@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/02_PROGRAMOWANIE/cpp/BinaryTree/BinaryTree.cpp" "D:/02_PROGRAMOWANIE/cpp/BinaryTree/cmake-build-debug/CMakeFiles/BinaryTree.dir/BinaryTree.cpp.obj"
-  "D:/02_PROGRAMOWANIE/cpp/BinaryTree/main.cpp" "D:/02_PROGRAMOWANIE/cpp/BinaryTree/cmake-build-debug/CMakeFiles/BinaryTree.dir/main.cpp.obj"
+  "D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/BinaryTree.cpp" "D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/cmake-build-debug/CMakeFiles/BinaryTree.dir/BinaryTree.cpp.obj"
+  "D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/main.cpp" "D:/STUDIA_INFORMATYCZNE/ROK_II/SEM_IV/05_ASD/binaryTree/cmake-build-debug/CMakeFiles/BinaryTree.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
