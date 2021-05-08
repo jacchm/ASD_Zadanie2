@@ -9,7 +9,7 @@ class BinaryTree {
 
 private:
     struct TreeNode {
-        int key;
+        int value;
         TreeNode* left;
         TreeNode* right;
     };
@@ -20,12 +20,12 @@ private:
                bool isLeft,
                bool isTop);
 
-    TreeNode * insertKey(TreeNode *, int);
+    TreeNode * insertValue(TreeNode *, int);
 
 public:
     BinaryTree();
     static TreeNode* createVertex(int);
-    void insertKey(int);
+    void insertValue(int);
     void print();
 };
 #endif //BINARYTREE_BINARYTREE_H

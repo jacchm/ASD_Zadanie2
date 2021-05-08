@@ -9,16 +9,16 @@ int main() {
 
     auto* tree = new BinaryTree();
 
-    tree->insertKey(10);
-    tree->insertKey(5);
-    tree->insertKey(4);
-    tree->insertKey(8);
-    tree->insertKey(7);
-    tree->insertKey(12);
-    tree->insertKey(11);
-    tree->insertKey(15);
-    tree->insertKey(17);
-    tree->insertKey(9);
+    tree->insertValue(10);
+    tree->insertValue(5);
+    tree->insertValue(4);
+    tree->insertValue(8);
+    tree->insertValue(7);
+    tree->insertValue(12);
+    tree->insertValue(11);
+    tree->insertValue(15);
+    tree->insertValue(17);
+    tree->insertValue(9);
 
     tree->print();
 
